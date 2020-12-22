@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+body {
+  font-size: 62.5%;
+}
+.polje {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kvadratek {
+  height: 33.4%;
+  width: 33.3333%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.krog {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-color: black;
+}
+.križec {
+}
+.križec::after {
+  content: '';
+  width: 4rem;
+  height: 1rem;
+  background-color: black;
+  display: block;
+  transform: translateY(-15px) rotate(45deg);
+}
+.križec::before {
+  content: '';
+  width: 4rem;
+  height: 1rem;
+  background-color: black;
+  display: block;
+  transform: rotate(-45deg);
+}
